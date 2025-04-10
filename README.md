@@ -2,4 +2,4 @@
 Shortcuts for git:
 * Remove all local branches except pattern
 
-    `git branch | grep -v @regexp | xargs git branch -D` e.g @regexp = "master\|develop"
+    `git branch | grep -v "master\|develop\|$(git branch --show-current)" | xargs git branch -D
